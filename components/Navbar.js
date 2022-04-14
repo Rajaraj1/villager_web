@@ -4,6 +4,8 @@ import Image from "next/image";
 import { useState } from "react";
 import { Transition } from "@headlessui/react";
 import { FaBars, FaHamburger } from "react-icons/fa";
+import navbar from "../styles/navbar.module.css";
+
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -13,27 +15,39 @@ const Navbar = () => {
         <div className="container mx-auto flex flex-wrap p-0 flex-col md:flex-row items-center">
           <nav className=" hidden md:flex lg:w-2/5 flex-wrap items-center text-base md:ml-auto ">
             <Link href="/">
-              <a className="mr-5 ">Home</a>
+              <a id={navbar.navLinks} className="mr-5">
+                Home
+              </a>
             </Link>
 
             <Link href="/blog">
-              <a className="mr-5 ">Blog</a>
+              <a id={navbar.navLinks} className="mr-5">
+                Blog
+              </a>
             </Link>
 
             <Link href="/learn">
-              <a className="mr-5 ">Learn</a>
+              <a id={navbar.navLinks} className="mr-5">
+                Learn
+              </a>
             </Link>
 
             <Link href="/poll">
-              <a className="mr-5 ">Poll</a>
+              <a id={navbar.navLinks} className="mr-5">
+                Poll
+              </a>
             </Link>
 
             <Link href="/quotes">
-              <a className="mr-5 ">Quotes</a>
+              <a id={navbar.navLinks} className="mr-5">
+                Quotes
+              </a>
             </Link>
 
             <Link href="/contact">
-              <a className="mr-5 ">Contact</a>
+              <a id={navbar.navLinks} className="mr-5">
+                Contact
+              </a>
             </Link>
           </nav>
           <a className="flex order-first lg:order-none lg:w-1/5 title-font font-medium items-center text-gray-900 lg:items-center lg:justify-center mb-4 md:mb-0">
@@ -46,6 +60,7 @@ const Navbar = () => {
                     height={28 + "px"}
                     alt="villagepur.svg"
                     className="animate-pulse"
+                    id={navbar.navImage}
                   />
                 </a>
               </Link>
@@ -55,6 +70,7 @@ const Navbar = () => {
             <button
               type="button"
               className="text-white bg-gradient-to-r from-purple-500 to-pink-500 hover:bg-gradient-to-l focus:ring-4 focus:ring-purple-200 dark:focus:ring-purple-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2"
+              id={navbar.navSearch}
             >
               Search Here
             </button>
