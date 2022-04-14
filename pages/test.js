@@ -1,3 +1,7 @@
-const prompt = require("prompt-sync")();
-let name = prompt("What is your name?");
-console.log(`Your name is ${name}! see how cool!`);
+import React from "react";
+
+const Test = () => {
+  return <div>Test</div>;
+};
+
+export default Test;
